@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <div id="d1"></div>
+    <div id="d1">
+      <i class="iconfont icon-paihangbang"></i>
+    </div>
   </div>
 </template>
 
