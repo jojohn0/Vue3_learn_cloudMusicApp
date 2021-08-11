@@ -1,30 +1,54 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <div class="left">
+      <i class="iconfont icon-icon-"></i>
+    </div>
+    <div class="center">
+      <router-link to="/profile">
+        <span class="title">我的</span>
+      </router-link>
+      <router-link to="/home">
+        <span class="title">发现</span>
+      </router-link>
+      <router-link to="/community">
+        <span class="title">云村</span>
+      </router-link>
+      <router-link to="/video">
+        <span class="title">视频</span>
+      </router-link>
+    </div>
+    <div class="right">
+      <i class="iconfont icon-sousuo"></i>
+    </div>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
+<script>
+export default {
+  name: "App",
+};
+</script>
+
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 #nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  font-size: 0.32rem;
+  width: 100%;
+  display: flex;
+  padding: 0.3rem 0.2rem;
+  .center {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    .title {
+      color: #000;
     }
+  }
+  .active {
+    font-weight: 900;
+  }
+  .iconfont {
+    font-size: 0.38rem;
   }
 }
 </style>
